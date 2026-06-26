@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leonardo Montanino — Developer Portfolio</title>
-  <meta name="description" content="Personal developer portfolio of Leonardo Montanino — building elegant, high-performance software.">
-  <meta property="og:title" content="Leonardo Montanino — Developer Portfolio">
+  <title>Leocool3175 - Bio & Portfolio</title>
+  <meta name="description"
+    content="Personal developer portfolio of Leocool3175 — building elegant, high-performance software.">
+  <meta property="og:title" content="Leocool3175 — Bio & Portfolio">
   <meta property="og:description" content="Personal developer portfolio — building elegant, high-performance software.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -45,8 +49,18 @@
     }
 
     /* ── Reset ── */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: var(--font-sans);
       background: var(--bg-0);
@@ -94,11 +108,12 @@
       flex-direction: column;
       gap: 0.25rem;
       z-index: 200;
-      box-shadow: 0 0 40px rgba(0,0,0,0.8), 0 0 1px var(--border-2) inset;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.8), 0 0 1px var(--border-2) inset;
       opacity: 0;
       transform: translateY(-50%) translateX(-20px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
+
     .sidebar.visible {
       opacity: 1;
       transform: translateY(-50%) translateX(0);
@@ -109,6 +124,7 @@
       border-bottom: 1px solid var(--border-1);
       margin-bottom: 0.5rem;
     }
+
     .sidebar-logo .mono {
       font-family: var(--font-mono);
       font-size: 0.7rem;
@@ -116,6 +132,7 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
+
     .sidebar-logo .name {
       font-size: 0.95rem;
       font-weight: 700;
@@ -137,6 +154,7 @@
       border-left: 3px solid transparent;
       text-decoration: none;
     }
+
     .nav-item i {
       width: 16px;
       text-align: center;
@@ -144,18 +162,27 @@
       opacity: 0.7;
       transition: opacity 0.2s;
     }
+
     .nav-item:hover {
       color: var(--text-1);
       background: rgba(245, 200, 66, 0.05);
     }
-    .nav-item:hover i { opacity: 1; }
+
+    .nav-item:hover i {
+      opacity: 1;
+    }
+
     .nav-item.active {
       color: var(--gold-1);
       border-left-color: var(--gold-1);
       background: rgba(245, 200, 66, 0.07);
       font-weight: 600;
     }
-    .nav-item.active i { opacity: 1; color: var(--gold-1); }
+
+    .nav-item.active i {
+      opacity: 1;
+      color: var(--gold-1);
+    }
 
     /* ── Main content ── */
     .main {
@@ -180,20 +207,25 @@
       /* Scroll-driven reveal */
       opacity: 0;
       transform: translateY(24px);
-      transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1), border-color 0.3s, box-shadow 0.3s;
+      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s, box-shadow 0.3s;
     }
+
     .section.visible {
       opacity: 1;
       transform: translateY(0);
     }
+
     .section::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--gold-2), transparent);
       opacity: 0.5;
     }
+
     .section:hover {
       border-color: var(--border-2);
       box-shadow: 0 0 30px var(--gold-glow-sm);
@@ -205,6 +237,7 @@
       gap: 0.65rem;
       margin-bottom: 1.75rem;
     }
+
     .section-icon {
       width: 32px;
       height: 32px;
@@ -217,6 +250,7 @@
       color: var(--gold-1);
       font-size: 0.8rem;
     }
+
     .section-title {
       font-size: 1.05rem;
       font-weight: 700;
@@ -235,6 +269,7 @@
       display: inline-block;
       margin-bottom: 1.5rem;
     }
+
     .profile-ring {
       width: 140px;
       height: 140px;
@@ -245,7 +280,13 @@
       top: -5px;
       left: -5px;
     }
-    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
     .profile-img-wrap {
       width: 130px;
       height: 130px;
@@ -256,6 +297,7 @@
       border: 3px solid var(--bg-0);
       box-shadow: 0 0 40px var(--gold-glow);
     }
+
     .profile-img-wrap img {
       width: 100%;
       height: 100%;
@@ -273,16 +315,19 @@
       margin-bottom: 0.4rem;
       line-height: 1.1;
     }
+
     .hero-role {
       font-size: 1.05rem;
       color: var(--text-2);
       font-weight: 400;
       margin-bottom: 0.75rem;
     }
+
     .hero-role span {
       color: var(--gold-1);
       font-weight: 600;
     }
+
     .hero-bio {
       max-width: 520px;
       margin: 0 auto 1.75rem;
@@ -291,31 +336,111 @@
       line-height: 1.75;
     }
 
-    /* Status badge */
-    .status-badge {
+    /* ── Info popup ── */
+    .social-link-btn {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(245, 200, 66, 0.08);
-      border: 1px solid var(--border-2);
-      border-radius: 999px;
-      padding: 0.35rem 1rem;
-      font-size: 0.78rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
       font-weight: 500;
+      cursor: pointer;
+      border: 1px solid var(--border-1);
+      color: var(--text-2);
+      background: rgba(255, 255, 255, 0.03);
+      transition: all 0.2s;
+      position: relative;
+      font-family: var(--font-sans);
+    }
+
+    .social-link-btn:hover {
+      border-color: var(--gold-2);
       color: var(--gold-1);
-      margin-bottom: 1.5rem;
+      background: rgba(245, 200, 66, 0.07);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px var(--gold-glow-sm);
     }
-    .status-dot {
-      width: 7px;
-      height: 7px;
-      background: #4ade80;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #4ade80;
-      animation: pulse-dot 2s ease-in-out infinite;
+
+    .social-link-btn i {
+      font-size: 0.85rem;
     }
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+
+    .info-popup {
+      position: fixed;
+      z-index: 9999;
+      background: rgba(12, 12, 12, 0.96);
+      border: 1px solid var(--border-2);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      min-width: 220px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(245, 200, 66, 0.08) inset;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(6px) scale(0.97);
+      transition: opacity 0.18s ease, transform 0.18s ease;
+    }
+
+    .info-popup.open {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+
+    .info-popup-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--gold-2);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+
+    .info-popup-value {
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      color: var(--text-1);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      border-radius: 6px;
+      padding: 0.3rem 0.5rem;
+      margin: 0 -0.5rem;
+      transition: background 0.15s;
+    }
+
+    .info-popup-value:hover {
+      background: rgba(245, 200, 66, 0.07);
+    }
+
+    .info-popup-copy {
+      margin-left: auto;
+      font-size: 0.72rem;
+      color: var(--text-3);
+      font-family: var(--font-sans);
+      transition: color 0.15s;
+    }
+
+    .info-popup-value:hover .info-popup-copy {
+      color: var(--gold-1);
+    }
+
+    .info-popup-copied {
+      font-size: 0.72rem;
+      color: #4ade80;
+      text-align: right;
+      margin-top: 0.4rem;
+      height: 1em;
+      font-family: var(--font-sans);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .info-popup-copied.show {
+      opacity: 1;
     }
 
     /* Social links */
@@ -325,6 +450,7 @@
       gap: 0.75rem;
       flex-wrap: wrap;
     }
+
     .social-link {
       display: inline-flex;
       align-items: center;
@@ -337,8 +463,9 @@
       transition: all 0.2s;
       border: 1px solid var(--border-1);
       color: var(--text-2);
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
     }
+
     .social-link:hover {
       border-color: var(--gold-2);
       color: var(--gold-1);
@@ -346,7 +473,10 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 20px var(--gold-glow-sm);
     }
-    .social-link i { font-size: 0.85rem; }
+
+    .social-link i {
+      font-size: 0.85rem;
+    }
 
     /* ── Skills ── */
     .skills-grid {
@@ -354,17 +484,20 @@
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 1rem;
     }
+
     .skill-category {
-      background: rgba(255,255,255,0.02);
+      background: rgba(255, 255, 255, 0.02);
       border: 1px solid var(--border-1);
       border-radius: var(--radius-md);
       padding: 1.25rem;
       transition: border-color 0.2s, background 0.2s;
     }
+
     .skill-category:hover {
       border-color: var(--border-2);
       background: rgba(245, 200, 66, 0.04);
     }
+
     .skill-cat-title {
       font-size: 0.75rem;
       font-weight: 700;
@@ -376,11 +509,13 @@
       align-items: center;
       gap: 0.4rem;
     }
+
     .skill-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
     }
+
     .skill-tag {
       background: rgba(245, 200, 66, 0.07);
       border: 1px solid rgba(245, 200, 66, 0.15);
@@ -398,34 +533,40 @@
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1.25rem;
     }
+
     .project-card {
-      background: rgba(255,255,255,0.02);
+      background: rgba(255, 255, 255, 0.02);
       border: 1px solid var(--border-1);
       border-radius: var(--radius-md);
       padding: 1.5rem;
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
-      transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       cursor: default;
       position: relative;
       overflow: hidden;
     }
+
     .project-card::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(245,200,66,0.04) 0%, transparent 60%);
+      background: linear-gradient(135deg, rgba(245, 200, 66, 0.04) 0%, transparent 60%);
       opacity: 0;
       transition: opacity 0.3s;
       pointer-events: none;
     }
+
     .project-card:hover {
       border-color: var(--border-2);
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.6), 0 0 20px var(--gold-glow-sm);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 20px var(--gold-glow-sm);
     }
-    .project-card:hover::after { opacity: 1; }
+
+    .project-card:hover::after {
+      opacity: 1;
+    }
 
     .project-header {
       display: flex;
@@ -433,33 +574,42 @@
       justify-content: space-between;
       gap: 0.5rem;
     }
+
     .project-name {
       font-size: 1rem;
       font-weight: 700;
       color: var(--text-1);
     }
+
     .project-links {
       display: flex;
       gap: 0.5rem;
     }
+
     .project-link {
       color: var(--text-3);
       font-size: 0.85rem;
       transition: color 0.2s;
       text-decoration: none;
     }
-    .project-link:hover { color: var(--gold-1); }
+
+    .project-link:hover {
+      color: var(--gold-1);
+    }
+
     .project-desc {
       font-size: 0.83rem;
       color: var(--text-2);
       line-height: 1.6;
       flex: 1;
     }
+
     .project-stack {
       display: flex;
       flex-wrap: wrap;
       gap: 0.35rem;
     }
+
     .project-stack span {
       background: rgba(245, 200, 66, 0.06);
       border: 1px solid rgba(245, 200, 66, 0.12);
@@ -475,6 +625,7 @@
       position: relative;
       padding-left: 1.75rem;
     }
+
     .timeline::before {
       content: '';
       position: absolute;
@@ -484,11 +635,16 @@
       width: 1px;
       background: linear-gradient(to bottom, var(--gold-3), transparent);
     }
+
     .timeline-item {
       position: relative;
       padding-bottom: 2rem;
     }
-    .timeline-item:last-child { padding-bottom: 0; }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
     .timeline-dot {
       position: absolute;
       left: -1.75rem;
@@ -500,6 +656,7 @@
       border: 2px solid var(--bg-0);
       box-shadow: 0 0 10px var(--gold-glow);
     }
+
     .timeline-period {
       font-family: var(--font-mono);
       font-size: 0.7rem;
@@ -507,35 +664,48 @@
       margin-bottom: 0.3rem;
       letter-spacing: 0.05em;
     }
+
     .timeline-role {
       font-size: 0.98rem;
       font-weight: 700;
       color: var(--text-1);
       margin-bottom: 0.15rem;
     }
+
     .timeline-company {
       font-size: 0.83rem;
       color: var(--text-2);
       margin-bottom: 0.65rem;
     }
+
     .timeline-desc {
       font-size: 0.83rem;
       color: var(--text-2);
       line-height: 1.65;
     }
+
     .timeline-desc ul {
       padding-left: 1.2rem;
       display: flex;
       flex-direction: column;
       gap: 0.3rem;
     }
-    .timeline-desc ul li::marker { color: var(--gold-2); }
+
+    .timeline-desc ul li::marker {
+      color: var(--gold-2);
+    }
 
     /* ── Responsive ── */
     @media (max-width: 900px) {
-      :root { --sidebar-w: 220px; }
-      .main { margin-left: calc(var(--sidebar-w) + 44px); }
+      :root {
+        --sidebar-w: 220px;
+      }
+
+      .main {
+        margin-left: calc(var(--sidebar-w) + 44px);
+      }
     }
+
     @media (max-width: 720px) {
       .sidebar {
         width: calc(100vw - 40px);
@@ -550,25 +720,67 @@
         padding: 0.6rem 0.5rem;
         gap: 0;
       }
-      .sidebar.visible { transform: translateY(0); }
-      .sidebar-logo { display: none; }
-      .nav-item { flex-direction: column; gap: 0.25rem; font-size: 0.65rem; padding: 0.5rem 0.7rem; border-left: none; border-top: 2px solid transparent; }
-      .nav-item.active { border-top-color: var(--gold-1); border-left-color: transparent; }
-      .main { margin-left: 0; padding: 1.5rem 1.25rem 120px; }
+
+      .sidebar.visible {
+        transform: translateY(0);
+      }
+
+      .sidebar-logo {
+        display: none;
+      }
+
+      .nav-item {
+        flex-direction: column;
+        gap: 0.25rem;
+        font-size: 0.65rem;
+        padding: 0.5rem 0.7rem;
+        border-left: none;
+        border-top: 2px solid transparent;
+      }
+
+      .nav-item.active {
+        border-top-color: var(--gold-1);
+        border-left-color: transparent;
+      }
+
+      .main {
+        margin-left: 0;
+        padding: 1.5rem 1.25rem 120px;
+      }
     }
 
     /* ── Accessibility ── */
     @media (prefers-reduced-motion: reduce) {
-      .profile-ring { animation: none; }
-      .status-dot { animation: none; }
-      .section { transition: opacity 0.3s ease, transform 0.3s ease; }
+      .profile-ring {
+        animation: none;
+      }
+
+      .status-dot {
+        animation: none;
+      }
+
+      .section {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
     }
 
     /* ── Scrollbar ── */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--bg-0); }
-    ::-webkit-scrollbar-thumb { background: rgba(245,200,66,0.25); border-radius: 999px; }
-    ::-webkit-scrollbar-thumb:hover { background: rgba(245,200,66,0.4); }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-0);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(245, 200, 66, 0.25);
+      border-radius: 999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(245, 200, 66, 0.4);
+    }
   </style>
 </head>
 
@@ -579,7 +791,7 @@
     <nav class="sidebar" id="sidebar" aria-label="Page navigation">
       <div class="sidebar-logo">
         <div class="mono">// portfolio</div>
-        <div class="name">Leonardo Montanino</div>
+        <div class="name">Leocool3175</div>
       </div>
 
       <a class="nav-item active" href="#hero" id="nav-hero">
@@ -605,40 +817,51 @@
 
       <!-- Hero -->
       <section class="section" id="hero">
-        <div class="profile-wrapper">
-          <div class="profile-ring" aria-hidden="true"></div>
-          <div class="profile-img-wrap">
-            <img src="avatar.png" alt="Leonardo Montanino profile avatar" width="130" height="130">
-          </div>
-        </div>
-
-        <div class="status-badge" role="status">
-          <span class="status-dot" aria-hidden="true"></span>
-          Available for opportunities
-        </div>
-
-        <h1 class="hero-name">Leonardo Montanino</h1>
-        <p class="hero-role">Software Developer & <span>Engineer</span></p>
+        <h1 class="hero-name">Leocool3175</h1>
+        <p class="hero-role">Minecraft Developer & <span>Staff</span></p>
         <p class="hero-bio">
-          I build high-performance, elegant software — from low-level systems to polished user interfaces.
-          Passionate about clean architecture, developer tooling, and pushing boundaries.
+          Hi, I'm Leocool3175 — Founder &amp; Owner of BedCraftMC,
+          Founder &amp; Lead Developer of Solarium Productions.
         </p>
 
         <div class="social-links" role="list">
-          <a class="social-link" href="https://github.com/Leocool3175" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="GitHub profile">
+          <a class="social-link" href="https://github.com/Leocool3175" target="_blank" rel="noopener noreferrer"
+            role="listitem" aria-label="GitHub profile">
             <i class="fa-brands fa-github" aria-hidden="true"></i>
             GitHub
           </a>
-          <a class="social-link" href="#" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="LinkedIn profile">
-            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-            LinkedIn
-          </a>
-          <a class="social-link" href="mailto:hello@example.com" role="listitem" aria-label="Send email">
+          <button class="social-link-btn" id="btn-discord" role="listitem" aria-label="Show Discord tag"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa-brands fa-discord" aria-hidden="true"></i>
+            Discord
+          </button>
+          <button class="social-link-btn" id="btn-contact" role="listitem" aria-label="Show contact email"
+            aria-haspopup="true" aria-expanded="false">
             <i class="fa-solid fa-envelope" aria-hidden="true"></i>
             Contact
-          </a>
+          </button>
         </div>
       </section>
+
+      <!-- Discord popup -->
+      <div class="info-popup" id="popup-discord" role="dialog" aria-label="Discord tag" aria-modal="true">
+        <div class="info-popup-label"><i class="fa-brands fa-discord" style="margin-right:0.3rem"></i>Discord</div>
+        <div class="info-popup-value" id="copy-discord" tabindex="0" role="button" aria-label="Copy Discord tag">
+          @leocool3175
+          <span class="info-popup-copy">copy</span>
+        </div>
+        <div class="info-popup-copied" id="copied-discord">Copied!</div>
+      </div>
+
+      <!-- Contact popup -->
+      <div class="info-popup" id="popup-contact" role="dialog" aria-label="Contact email" aria-modal="true">
+        <div class="info-popup-label"><i class="fa-solid fa-envelope" style="margin-right:0.3rem"></i>Contact</div>
+        <div class="info-popup-value" id="copy-contact" tabindex="0" role="button" aria-label="Copy email address">
+          support@solariumproductions.ch
+          <span class="info-popup-copy">copy</span>
+        </div>
+        <div class="info-popup-copied" id="copied-contact">Copied!</div>
+      </div>
 
       <!-- Skills -->
       <section class="section" id="skills">
@@ -657,11 +880,9 @@
             </div>
             <div class="skill-tags" role="list">
               <span class="skill-tag" role="listitem">Java</span>
-              <span class="skill-tag" role="listitem">Python</span>
+              <span class="skill-tag" role="listitem">HTML</span>
+              <span class="skill-tag" role="listitem">CSS</span>
               <span class="skill-tag" role="listitem">JavaScript</span>
-              <span class="skill-tag" role="listitem">TypeScript</span>
-              <span class="skill-tag" role="listitem">C++</span>
-              <span class="skill-tag" role="listitem">HTML / CSS</span>
             </div>
           </div>
 
@@ -673,10 +894,7 @@
             <div class="skill-tags" role="list">
               <span class="skill-tag" role="listitem">Node.js</span>
               <span class="skill-tag" role="listitem">Express</span>
-              <span class="skill-tag" role="listitem">REST APIs</span>
               <span class="skill-tag" role="listitem">JVM / GraalVM</span>
-              <span class="skill-tag" role="listitem">PostgreSQL</span>
-              <span class="skill-tag" role="listitem">Redis</span>
             </div>
           </div>
 
@@ -688,7 +906,6 @@
             <div class="skill-tags" role="list">
               <span class="skill-tag" role="listitem">React</span>
               <span class="skill-tag" role="listitem">Next.js</span>
-              <span class="skill-tag" role="listitem">Vite</span>
               <span class="skill-tag" role="listitem">Three.js</span>
               <span class="skill-tag" role="listitem">CSS Animations</span>
             </div>
@@ -697,14 +914,11 @@
           <div class="skill-category">
             <div class="skill-cat-title">
               <i class="fa-solid fa-toolbox" aria-hidden="true"></i>
-              Tools & DevOps
+              Tools
             </div>
             <div class="skill-tags" role="list">
               <span class="skill-tag" role="listitem">Git</span>
-              <span class="skill-tag" role="listitem">GitHub Actions</span>
-              <span class="skill-tag" role="listitem">Docker</span>
               <span class="skill-tag" role="listitem">Linux</span>
-              <span class="skill-tag" role="listitem">Nginx</span>
             </div>
           </div>
         </div>
@@ -723,96 +937,55 @@
 
           <article class="project-card">
             <div class="project-header">
-              <h3 class="project-name">Project Alpha</h3>
+              <h3 class="project-name">BedCraftMC - Minecraft Server Network</h3>
               <div class="project-links">
-                <a class="project-link" href="https://github.com/Leocool3175" target="_blank" rel="noopener noreferrer" aria-label="View project on GitHub">
-                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                <a class="project-link" href="https://discord.bedcraftmc.eu" target="_blank" rel="noopener noreferrer"
+                  aria-label="View project on Discord">
+                  <i class="fa-brands fa-discord" aria-hidden="true"></i>
                 </a>
-                <a class="project-link" href="#" aria-label="Visit live project">
+                <a class="project-link" href="https://discord.bedcraftmc.eu" target="_blank" rel="noopener noreferrer"
+                  aria-label="Visit live project">
                   <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
             <p class="project-desc">
-              A high-performance backend service built with a focus on low latency and high throughput. 
-              Features custom networking layer and memory-optimized data structures.
+              A Minecraft Network with a focus on High Quality.
+              Features a unique gamemodes, such as custom BedWars.
             </p>
             <div class="project-stack">
               <span>Java</span>
-              <span>Netty</span>
-              <span>Redis</span>
-              <span>Docker</span>
+              <span>Paper</span>
+              <span>Spigot</span>
+              <span>Bukkit</span>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-header">
-              <h3 class="project-name">Web Platform</h3>
+              <h3 class="project-name">Solarium Productions</h3>
               <div class="project-links">
-                <a class="project-link" href="https://github.com/Leocool3175" target="_blank" rel="noopener noreferrer" aria-label="View project on GitHub">
-                  <i class="fa-brands fa-github" aria-hidden="true"></i>
-                </a>
-                <a class="project-link" href="#" aria-label="Visit live project">
+                <a class="project-link" href="https://solariumproductions.ch" target="_blank" rel="noopener noreferrer"
+                  aria-label="Visit live project">
                   <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
             <p class="project-desc">
-              Full-stack SaaS dashboard with real-time analytics, authentication, and role-based 
-              access control. Deployed on a serverless edge infrastructure.
+              Minecraft services such as Solarium Client, SolarAnimations, SolarMacros & more to come.
+              In collaboration with BedCraft Plugins
             </p>
             <div class="project-stack">
-              <span>Next.js</span>
-              <span>TypeScript</span>
-              <span>PostgreSQL</span>
-              <span>Tailwind</span>
+              <span>Java</span>
+              <span>Gradle</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Spigot</span>
+              <span>Paper</span>
+              <span>Bukkit</span>
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-header">
-              <h3 class="project-name">CLI Toolkit</h3>
-              <div class="project-links">
-                <a class="project-link" href="https://github.com/Leocool3175" target="_blank" rel="noopener noreferrer" aria-label="View project on GitHub">
-                  <i class="fa-brands fa-github" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-            <p class="project-desc">
-              Developer productivity CLI with scaffolding, environment management, and 
-              configurable automation pipelines. Published as an npm package.
-            </p>
-            <div class="project-stack">
-              <span>Node.js</span>
-              <span>TypeScript</span>
-              <span>Commander.js</span>
-              <span>npm</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <h3 class="project-name">3D Web Experience</h3>
-              <div class="project-links">
-                <a class="project-link" href="https://github.com/Leocool3175" target="_blank" rel="noopener noreferrer" aria-label="View project on GitHub">
-                  <i class="fa-brands fa-github" aria-hidden="true"></i>
-                </a>
-                <a class="project-link" href="#" aria-label="Visit live project">
-                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-            <p class="project-desc">
-              Interactive 3D web application featuring custom shaders, procedural audio 
-              synthesis, and a first-person exploration mechanic.
-            </p>
-            <div class="project-stack">
-              <span>Three.js</span>
-              <span>GLSL</span>
-              <span>Web Audio API</span>
-              <span>Vite</span>
-            </div>
-          </article>
 
         </div>
       </section>
@@ -823,48 +996,50 @@
           <div class="section-icon" aria-hidden="true">
             <i class="fa-solid fa-timeline"></i>
           </div>
-          <h2 class="section-title">Experience & Timeline</h2>
+          <h2 class="section-title">Staff Experience & Timeline</h2>
         </div>
 
         <div class="timeline" role="list">
 
           <div class="timeline-item" role="listitem">
             <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-period">2024 — Present</div>
-            <div class="timeline-role">Senior Software Engineer</div>
-            <div class="timeline-company">Company Name</div>
+            <div class="timeline-period">December 2024 </div>
+            <div class="timeline-role">Former Staff Member LunarMC</div>
+            <div class="timeline-company">play.lunarmc.it</div>
             <div class="timeline-desc">
               <ul>
-                <li>Designed and shipped high-throughput microservices handling millions of daily requests</li>
-                <li>Led architecture decisions for a greenfield platform rewrite</li>
-                <li>Mentored junior developers and established code review culture</li>
+                <li>Started as Helper (Supporter). Accepted by @pero1999</li>
+                <li>Promoted to Moderator (SS Verified), BedWars Manager</li>
+                <li>Server unfortunately closed in Summer 2025, last promotion was Admin.</li>
               </ul>
             </div>
           </div>
 
           <div class="timeline-item" role="listitem">
             <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-period">2022 — 2024</div>
-            <div class="timeline-role">Software Engineer</div>
-            <div class="timeline-company">Company Name</div>
+            <div class="timeline-period"> February 2025 — Present</div>
+            <div class="timeline-role">Founder & Owner of BedCraftMC</div>
+            <div class="timeline-company">play.bedcraftmc.eu</div>
             <div class="timeline-desc">
               <ul>
-                <li>Built REST APIs consumed by 50k+ active users</li>
-                <li>Reduced p99 latency by 40% through profiling and algorithmic improvements</li>
-                <li>Integrated third-party services and payment providers</li>
+                <li>Lead the development of a Minecraft Network with a focus on High Quality.</li>
+                <li>Implemented a unique BedWars gamemode that became a fan favorite.</li>
+                <li>Currently working on expanding the BedCraftMC brand to include multiple Minecraft servers and
+                  services.</li>
               </ul>
             </div>
           </div>
 
           <div class="timeline-item" role="listitem">
             <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-period">2020 — 2022</div>
-            <div class="timeline-role">Junior Developer / Freelance</div>
-            <div class="timeline-company">Self-employed</div>
+            <div class="timeline-period">November 2025 — Present</div>
+            <div class="timeline-role">Founder & Lead Developer of Solarium Productions</div>
+            <div class="timeline-company">solariumproductions.ch</div>
             <div class="timeline-desc">
               <ul>
-                <li>Delivered custom web and backend solutions for clients across multiple industries</li>
-                <li>Built and maintained open-source projects with active communities</li>
+                <li>Lead the development of a Minecraft services company with a focus on High Quality Products &
+                  Services.</li>
+                <li>Currently working on expanding the Solarium Productions brand to include more Products.</li>
               </ul>
             </div>
           </div>
@@ -921,6 +1096,94 @@
         if (target) target.scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    // ── Info popups ──
+    function positionPopup(btn, popup) {
+      const rect = btn.getBoundingClientRect();
+      const gap = 10;
+      let top = rect.bottom + gap;
+      let left = rect.left;
+      // Keep popup within viewport horizontally
+      const pw = popup.offsetWidth || 240;
+      if (left + pw > window.innerWidth - 12) {
+        left = window.innerWidth - pw - 12;
+      }
+      popup.style.top = top + 'px';
+      popup.style.left = left + 'px';
+    }
+
+    let activePopup = null;
+    let activeBtn = null;
+
+    function openPopup(btn, popup) {
+      if (activePopup && activePopup !== popup) closePopup();
+      activePopup = popup;
+      activeBtn = btn;
+      popup.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      positionPopup(btn, popup);
+    }
+
+    function closePopup() {
+      if (!activePopup) return;
+      activePopup.classList.remove('open');
+      if (activeBtn) activeBtn.setAttribute('aria-expanded', 'false');
+      activePopup = null;
+      activeBtn = null;
+    }
+
+    function setupPopupBtn(btnId, popupId) {
+      const btn = document.getElementById(btnId);
+      const popup = document.getElementById(popupId);
+      if (!btn || !popup) return;
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        popup.classList.contains('open') ? closePopup() : openPopup(btn, popup);
+      });
+    }
+
+    setupPopupBtn('btn-discord', 'popup-discord');
+    setupPopupBtn('btn-contact', 'popup-contact');
+
+    // Close on outside click / Escape
+    document.addEventListener('click', (e) => {
+      if (activePopup && !activePopup.contains(e.target)) closePopup();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closePopup();
+    });
+
+    // Copy to clipboard
+    function setupCopy(rowId, text, feedbackId) {
+      const row = document.getElementById(rowId);
+      if (!row) return;
+      const copy = async () => {
+        try {
+          await navigator.clipboard.writeText(text);
+        } catch {
+          // Fallback for older browsers
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+        const fb = document.getElementById(feedbackId);
+        if (fb) {
+          fb.classList.add('show');
+          setTimeout(() => fb.classList.remove('show'), 1800);
+        }
+      };
+      row.addEventListener('click', copy);
+      row.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); copy(); } });
+    }
+
+    setupCopy('copy-discord', '@leocool3175', 'copied-discord');
+    setupCopy('copy-contact', 'support@solariumproductions.ch', 'copied-contact');
   </script>
 </body>
+
 </html>
