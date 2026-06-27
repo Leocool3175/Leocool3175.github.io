@@ -5,11 +5,11 @@ Personal developer portfolio website — built with vanilla HTML, CSS & JavaScri
 **Live site:** https://Leocool3175.github.io
 
 ## Features
-- 🖤 Black & gold premium aesthetic
-- 📱 Fully responsive (desktop sidebar → mobile bottom nav)
-- ✨ Scroll-driven section reveal animations
-- 🌀 Spinning golden profile ring
-- 🧭 Active-section tracking navigation
+- Black & gold premium aesthetic
+- Fully responsive (desktop sidebar → mobile bottom nav)
+- Scroll-driven section reveal animations
+- Spinning golden profile ring
+- Active-section tracking navigation
 
 ## Sections
 - **Hero** — name, role, bio, social links
@@ -23,5 +23,3 @@ Edit `index.html` directly:
 - Add/remove skill tags in the `#skills` section
 - Add your real projects in the `#projects` section
 - Update the timeline entries in `#experience`
-- Replace social link `href` values with your real URLs
-- Swap `avatar.png` with your own profile photo
